@@ -13,6 +13,11 @@ def print_elapsed_time(start_time):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print(SEPARATOR_LINE)
 
+def print_calculating(title):
+    """Prints a standardized calculating message."""
+    print(f'\nCalculating {title}...\n')
+
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -91,7 +96,7 @@ def station_stats(df):
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
-    print('\nCalculating Trip Duration...\n')
+    print_calculating('Trip Duration') 
     start_time = time.time()
 
     # display total travel time
@@ -106,7 +111,7 @@ def trip_duration_stats(df):
 def user_stats(df):
     """Displays statistics on bikeshare users."""
 
-    print('\nCalculating User Stats...\n')
+    print_calculating('User Stats')
     start_time = time.time()
 
     # Display counts of user types
