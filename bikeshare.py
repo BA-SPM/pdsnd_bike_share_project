@@ -5,12 +5,13 @@ import numpy as np
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+SEPARATOR_LINE = '-' * 40
 
 
 def print_elapsed_time(start_time):
     """Prints elapsed runtime for a stats section."""
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print(SEPARATOR_LINE)
 
 def get_filters():
     """
@@ -31,7 +32,7 @@ def get_filters():
     # get user input for day of week (all, monday, tuesday, ... sunday)
 
 
-    print('-'*40)
+    print(SEPARATOR_LINE)
     return city, month, day
 
 
