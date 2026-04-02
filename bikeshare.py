@@ -10,6 +10,18 @@ import numpy as np
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+SEPARATOR_LINE = '-' * 40
+
+
+def print_elapsed_time(start_time):
+    """Prints elapsed runtime for a stats section."""
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print(SEPARATOR_LINE)
+
+def print_calculating(title):
+    """Prints a standardized calculating message."""
+    print(f'\nCalculating {title}...\n')
+
 
 def get_filters():
     """
@@ -30,7 +42,7 @@ def get_filters():
     # get user input for day of week (all, monday, tuesday, ... sunday)
 
 
-    print('-'*40)
+    print(SEPARATOR_LINE)
     return city, month, day
 
 
@@ -65,8 +77,7 @@ def time_stats(df):
     # display the most common start hour
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_elapsed_time(start_time)
 
 
 def station_stats(df):
@@ -84,14 +95,13 @@ def station_stats(df):
     # display most frequent combination of start station and end station trip
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_elapsed_time(start_time)
 
 
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
-    print('\nCalculating Trip Duration...\n')
+    print_calculating('Trip Duration') 
     start_time = time.time()
 
     # display total travel time
@@ -100,14 +110,13 @@ def trip_duration_stats(df):
     # display mean travel time
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_elapsed_time(start_time)
 
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
 
-    print('\nCalculating User Stats...\n')
+    print_calculating('User Stats')
     start_time = time.time()
 
     # Display counts of user types
@@ -119,8 +128,7 @@ def user_stats(df):
     # Display earliest, most recent, and most common year of birth
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_elapsed_time(start_time)
 
 
 def main():
