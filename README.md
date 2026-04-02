@@ -14,6 +14,9 @@ Its intention is to learn how to use version control and github.
 - bikeshare.py
 - new_york_city.csv (Data)
 
+### Co-Author
+Bastian
+
 
 ### Credits
 Credits to Udacity. 
