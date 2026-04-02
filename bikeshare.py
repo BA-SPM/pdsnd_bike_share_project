@@ -1,3 +1,8 @@
+'''
+Bikeshare-Analyse-Skript: Liest US-Bikeshare-Daten ein, filtert sie nach Stadt/Monat/Wochentag
+und gibt interaktive Statistiken zu Fahrzeiten, Stationen und Nutzern aus.
+'''
+
 import time
 import pandas as pd
 import numpy as np
