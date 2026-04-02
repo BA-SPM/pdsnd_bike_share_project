@@ -7,7 +7,8 @@
 
 
 ### Description
-will be added later
+This is a Udacity project.
+Its intention is to learn how to use version control and github.
 
 ### Files used
 - bikeshare.py
